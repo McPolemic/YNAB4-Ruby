@@ -1,0 +1,25 @@
+{
+  "dataVersion": "4.2",
+  "budgetDataGUID": null,
+  "formatVersion": null,
+  "deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
+  "endVersion": "A-76",
+  "items": [
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-76",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A18",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A18",
+      "budgeted": 100
+    }
+  ],
+  "publishTime": "Mon Feb 17 15:16:23 GMT-0500 2014",
+  "shortDeviceId": "A",
+  "startVersion": "A-75"
+}

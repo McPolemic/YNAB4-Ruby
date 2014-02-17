@@ -1,0 +1,90 @@
+{
+  "dataVersion": "4.2",
+  "budgetDataGUID": null,
+  "formatVersion": null,
+  "deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
+  "endVersion": "A-86",
+  "items": [
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-81",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A25",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A25",
+      "budgeted": 100
+    },
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-82",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A26",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A26",
+      "budgeted": 50
+    },
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-83",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A27",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A27",
+      "budgeted": 50
+    },
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-84",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A28",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A28",
+      "budgeted": 50
+    },
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-85",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A29",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A29",
+      "budgeted": 50
+    },
+    {
+      "overspendingHandling": null,
+      "parentMonthlyBudgetId": "MB/2014-02",
+      "isTombstone": false,
+      "entityVersion": "A-86",
+      "madeWithKnowledge": null,
+      "isResolvedConflict": false,
+      "entityId": "MCB/2014-02/A30",
+      "entityType": "monthlyCategoryBudget",
+      "note": null,
+      "categoryId": "A30",
+      "budgeted": 50
+    }
+  ],
+  "publishTime": "Mon Feb 17 15:17:10 GMT-0500 2014",
+  "shortDeviceId": "A",
+  "startVersion": "A-80"
+}
