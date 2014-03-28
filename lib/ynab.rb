@@ -6,13 +6,19 @@ module Ynab
   end
 
   class Budget
-    attr_reader :transactions
+    attr_reader :transactions,
+                :payees
     def initialize file_path=nil
       @transactions = []
+      @payees = []
     end
 
     def add_transaction t
       @transactions = @transactions + Array(t)
+    end
+
+    def add_payee t
+      @payees = @payees + Array(t)
     end
   end
 
