@@ -15,6 +15,27 @@ describe Ynab do
     end
   end
 
+  describe Ynab::Budget do
+    let(:budget) { Ynab::Budget.new }
+    it 'stores accounts'
+    it 'stores categories'
+    it 'stores payees'
+    it 'stores transactions' do
+      expect(budget.transactions.count).to eq 0
+    end
+
+    it 'adds transactions' do
+      t = Ynab::Transaction.new('Savings',
+                                Date.new(2014, 3, 26), 
+                                'Target',
+                                'Spending Money',
+                                "This is a memo",
+                                -100.00)
+      budget.add_transaction(t)
+      expect(budget.transactions.count).to eq 1
+    end
+  end
+
   describe Ynab::Transaction do
     describe '#new' do
       let(:account)  { 'Savings' }
