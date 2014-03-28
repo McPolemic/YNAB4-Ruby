@@ -20,24 +20,29 @@ module Ynab
                 :payee,
                 :category,
                 :memo,
-                :outflow,
-                :inflow
+                :amount
 
     def initialize account,
                    date,
                    payee,
                    category,
                    memo,
-                   outflow,
-                   inflow
+                   amount
 
       @account = account
       @date = date 
       @payee = payee 
       @category = category 
       @memo = memo 
-      @outflow = outflow 
-      @inflow = inflow
+      @amount = amount
+    end
+
+    def inflow
+      @amount if @amount > 0
+    end
+
+    def outflow
+      @amount if @amount < 0
     end
   end
 

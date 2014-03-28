@@ -17,17 +17,17 @@ describe Ynab do
 
   describe Ynab::Transaction do
     describe '#new' do
+      let(:account)  { 'Savings' }
+      let(:category) { 'Spending Money' }
+      let(:payee)    { 'Target' }
+
       it 'stores values for a debit transaction' do
-        account =  Ynab::Account.stub(:new)
-        payee = 'Target'
-        category = Ynab::Category.stub(:new)
         t = Ynab::Transaction.new(account,
                                   Date.new(2014, 3, 26), 
                                   payee,
                                   category,
                                   "This is a memo",
-                                  -100.00,
-                                  nil)
+                                  -100.00)
 
         expect(t.date).to eq Date.new(2014, 3, 26)
         expect(t.payee).to eq 'Target'
@@ -35,7 +35,18 @@ describe Ynab do
         expect(t.inflow).to eq nil
       end
 
-      it 'stores vaues for a credit transaction'
+      it 'stores values for a credit transaction' do
+        t = Ynab::Transaction.new(account,
+                                  Date.new(2014, 2, 28),
+                                  payee,
+                                  category,
+                                  "Another memo",
+                                  200.00)
+        expect(t.date).to eq Date.new(2014, 2, 28)
+        expect(t.payee).to eq 'Target'
+        expect(t.inflow).to eq 200.00
+        expect(t.outflow).to eq nil
+      end
     end
   end
 end
