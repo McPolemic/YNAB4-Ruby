@@ -1,8 +1,10 @@
 require "ynab/version"
 
 module Ynab
+  class BudgetFileNotFound < StandardError; end
+
   def self.open file_path
-    self::Budget.new file_path
+    self::Budget.open file_path
   end
 
   class Budget
@@ -10,7 +12,7 @@ module Ynab
                 :payees,
                 :categories,
                 :accounts
-    def initialize file_path=nil
+    def initialize
       @transactions = []
       @payees = []
       @categories = []
@@ -31,6 +33,11 @@ module Ynab
 
     def add_account account
       @accounts = @accounts + Array(account)
+    end
+
+    def self.open file_path
+      raise Ynab::BudgetFileNotFound unless File.exists? file_path
+      self.new
     end
   end
 

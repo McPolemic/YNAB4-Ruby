@@ -52,6 +52,15 @@ describe Ynab do
         expect(budget.transactions.count).to eq 1
       end
     end
+
+    describe '.open' do
+      it 'raises an error if the file does not exist' do
+        invalid_path = '/invalid'
+        expect{Ynab::Budget.open(invalid_path)}.to raise_error Ynab::BudgetFileNotFound
+      end
+
+      it 'adds transactions found in the file'
+    end
   end
 
   describe Ynab::Transaction do
