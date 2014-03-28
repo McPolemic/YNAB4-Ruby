@@ -65,7 +65,4 @@ module Ynab
       @amount if @amount < 0
     end
   end
-
-  class Account; end
-  class Category; end
 end
