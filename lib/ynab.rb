@@ -42,6 +42,5 @@ module Ynab
   end
 
   class Account; end
-  class Payee; end
   class Category; end
 end

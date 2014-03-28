@@ -19,7 +19,7 @@ describe Ynab do
     describe '#new' do
       it 'stores values for a debit transaction' do
         account =  Ynab::Account.stub(:new)
-        payee =    Ynab::Payee.stub(:new)
+        payee = 'Target'
         category = Ynab::Category.stub(:new)
         t = Ynab::Transaction.new(account,
                                   Date.new(2014, 3, 26), 
@@ -30,6 +30,7 @@ describe Ynab do
                                   nil)
 
         expect(t.date).to eq Date.new(2014, 3, 26)
+        expect(t.payee).to eq 'Target'
         expect(t.outflow).to eq -100.00
         expect(t.inflow).to eq nil
       end
