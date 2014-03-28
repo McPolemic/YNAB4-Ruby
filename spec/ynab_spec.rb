@@ -17,8 +17,16 @@ describe Ynab do
 
   describe Ynab::Budget do
     let(:budget) { Ynab::Budget.new }
-    it 'stores accounts'
-    it 'adds accounts'
+
+    it 'stores accounts' do
+      expect(budget.accounts.count).to eq 0
+    end
+
+    it 'adds accounts' do
+      account = 'Savings'
+      budget.add_account account
+      expect(budget.accounts.count).to eq 1
+    end
 
     it 'stores categories' do
       expect(budget.categories.count).to eq 0
