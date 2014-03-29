@@ -1,8 +1,8 @@
 require "ynab/version"
+require_relative './budget_parser'
+require_relative './errors'
 
 module Ynab
-  class BudgetFileNotFound < StandardError; end
-
   def self.open file_path
     self::Budget.open file_path
   end
@@ -36,7 +36,7 @@ module Ynab
     end
 
     def self.open file_path
-      raise Ynab::BudgetFileNotFound unless File.exists? file_path
+      BudgetParser.new.open file_path
       self.new
     end
   end
