@@ -1,6 +1,6 @@
 require "ynab/version"
-require_relative './budget_parser'
-require_relative './errors'
+require 'ynab/budget_parser'
+require 'ynab/errors'
 
 module Ynab
   def self.open file_path

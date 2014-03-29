@@ -1,5 +1,5 @@
 require 'securerandom'
-require_relative '../../lib/budget_parser.rb'
+require 'ynab/budget_parser'
 
 describe Ynab::BudgetParser do
   let(:bp) { Ynab::BudgetParser.new('./test') }

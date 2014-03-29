@@ -1,5 +1,5 @@
 require 'json'
-require_relative './errors'
+require 'ynab/errors'
 
 module Ynab
   class BudgetParser
