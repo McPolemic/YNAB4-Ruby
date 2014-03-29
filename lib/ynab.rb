@@ -36,7 +36,7 @@ module Ynab
     end
 
     def self.open file_path
-      BudgetParser.new.open file_path
+      BudgetParser.new(file_path).open
       self.new
     end
   end

@@ -10,7 +10,7 @@ describe Ynab::BudgetParser do
       bp.should_receive(:main_data_file).and_return(data_file)
       File.should_receive(:open).with(data_file, "r")
 
-      expect(bp.open './test/').to eq nil
+      expect(bp.open).to eq nil
     end
   end
 
