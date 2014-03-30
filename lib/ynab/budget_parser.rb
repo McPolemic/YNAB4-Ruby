@@ -1,5 +1,5 @@
 require 'json'
-require_relative './errors'
+require 'ynab/errors'
 
 module Ynab
   class BudgetParser
@@ -7,7 +7,7 @@ module Ynab
       @path = file_path
     end
 
-    def open file_path
+    def open
       JSON.load(File.open(main_data_file, 'r'))
     end
 
