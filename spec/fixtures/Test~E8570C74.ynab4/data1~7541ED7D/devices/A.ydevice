@@ -1,10 +1,10 @@
 {
 	"highestDataVersionImported": null,
 	"friendlyName": "mac0018",
-	"knowledgeInFullBudgetFile": "A-93",
+	"knowledgeInFullBudgetFile": "A-94",
 	"hasFullKnowledge": true,
 	"shortDeviceId": "A",
-	"knowledge": "A-93",
+	"knowledge": "A-94",
 	"formatVersion": "1.2",
 	"deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
 	"YNABVersion": "Desktop version: YNAB 4 v4.3.451 (com.ynab.YNAB4.LiveCaptive), AIR Version: 4.0.0.1390",

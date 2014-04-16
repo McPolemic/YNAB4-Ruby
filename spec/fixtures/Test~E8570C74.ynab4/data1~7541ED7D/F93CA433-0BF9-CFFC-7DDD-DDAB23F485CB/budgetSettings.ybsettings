@@ -20,7 +20,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
 							<visible>true</visible>
-							<width>109.70149221237277</width>
+							<width>109.70149221237276</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>checkNumber</dataField>

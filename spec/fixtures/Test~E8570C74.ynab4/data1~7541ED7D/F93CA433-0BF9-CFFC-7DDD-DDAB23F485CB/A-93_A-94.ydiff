@@ -1,0 +1,40 @@
+{
+  "budgetDataGUID": null,
+  "startVersion": "A-93",
+  "dataVersion": "4.2",
+  "endVersion": "A-94",
+  "shortDeviceId": "A",
+  "publishTime": "Wed Apr 16 00:53:22 GMT-0400 2014",
+  "formatVersion": null,
+  "deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
+  "items": [
+    {
+      "date": "2014-02-17",
+      "memo": "A sample memo!",
+      "source": null,
+      "cleared": "Cleared",
+      "isTombstone": false,
+      "madeWithKnowledge": null,
+      "entityVersion": "A-94",
+      "dateEnteredFromSchedule": null,
+      "subTransactions": null,
+      "flag": null,
+      "matchedTransactions": null,
+      "checkNumber": null,
+      "targetAccountId": null,
+      "importedPayee": null,
+      "transferTransactionId": null,
+      "categoryId": "Category/__ImmediateIncome__",
+      "YNABID": null,
+      "amount": 1000,
+      "FITID": null,
+      "entityId": "76E80586-A5B7-9A9D-F6C2-417D0503D756",
+      "isResolvedConflict": false,
+      "entityType": "transaction",
+      "parentTransactionIdIfMatched": null,
+      "payeeId": "30ACAD6C-2080-18C4-4D9B-417D050FC81C",
+      "accountId": "F63FCDAB-2D87-51A5-08DB-417D04F32BDF",
+      "accepted": true
+    }
+  ]
+}

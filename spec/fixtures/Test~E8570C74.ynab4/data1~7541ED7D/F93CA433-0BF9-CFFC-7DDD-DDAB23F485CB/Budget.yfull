@@ -2,8 +2,9 @@
 	"transactions": [
 		{
 			"date": "2014-02-17",
+			"memo": "A sample memo!",
 			"cleared": "Cleared",
-			"entityVersion": "A-66",
+			"entityVersion": "A-94",
 			"categoryId": "Category/__ImmediateIncome__",
 			"amount": 1000,
 			"entityId": "76E80586-A5B7-9A9D-F6C2-417D0503D756",
@@ -51,7 +52,7 @@
 	],
 	"fileMetaData": {
 		"entityType": "fileMetaData",
-		"currentKnowledge": "A-93",
+		"currentKnowledge": "A-94",
 		"budgetDataVersion": "4.2"
 	},
 	"accountMappings": [],
