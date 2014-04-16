@@ -24,8 +24,18 @@ describe Ynab do
       expect(transaction.memo).to eq "A sample memo!"
     end
 
-    it "shows transaction's account"
-    it "shows transaction's payee"
-    it "shows transaction's category"
+    it "shows transaction's account" do
+      pending "waiting on parsing account objects"
+      expect(transaction.account.name).to eq "Savings"
+    end
+
+    it "shows transaction's payee" do
+      pending "waiting on parsing payee objects"
+      expect(transaction.payee.name).to eq "Starting Balance"
+    end
+
+    it "shows transaction's category" do
+      pending "waiting on parsing category objects"
+    end
   end
 end
