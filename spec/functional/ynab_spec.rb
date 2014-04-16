@@ -20,9 +20,12 @@ describe Ynab do
       expect(transactions[3].amount).to eq -100.12
     end
 
+    it "shows transaction's memo" do
+      expect(transaction.memo).to eq "A sample memo!"
+    end
+
     it "shows transaction's account"
     it "shows transaction's payee"
     it "shows transaction's category"
-    it "shows transaction's memo"
   end
 end

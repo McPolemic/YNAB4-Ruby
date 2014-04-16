@@ -49,7 +49,7 @@ module Ynab
                                       date = Date.parse(t["date"]),
                                       payee = t["payeeId"],
                                       category = t["categoryId"],
-                                      memo = nil,
+                                      memo = t["memo"],
                                       amount = t["amount"])
         add_transaction(transaction)
       end
