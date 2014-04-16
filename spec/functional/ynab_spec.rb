@@ -1,3 +1,4 @@
+require 'bigdecimal'
 require 'ynab'
 
 describe Ynab do
@@ -15,7 +16,10 @@ describe Ynab do
       expect(transaction.date).to eq Date.new(2014, 2, 17)
     end
 
-    it "shows transaction's amount"
+    it "shows transaction's amount" do
+      expect(transaction.amount).to eq 1000
+    end
+
     it "shows transaction's account"
     it "shows transaction's payee"
     it "shows transaction's category"
