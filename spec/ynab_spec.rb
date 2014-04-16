@@ -46,8 +46,6 @@ describe Ynab do
         invalid_path = '/invalid'
         expect{Ynab::Budget.open(invalid_path)}.to raise_error Ynab::BudgetFileNotFound
       end
-
-      it 'adds transactions found in the file'
     end
   end
 
