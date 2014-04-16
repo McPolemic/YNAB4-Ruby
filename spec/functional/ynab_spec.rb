@@ -17,7 +17,7 @@ describe Ynab do
     end
 
     it "shows transaction's amount" do
-      expect(transaction.amount).to eq 1000
+      expect(transactions[3].amount).to eq -100.12
     end
 
     it "shows transaction's account"
