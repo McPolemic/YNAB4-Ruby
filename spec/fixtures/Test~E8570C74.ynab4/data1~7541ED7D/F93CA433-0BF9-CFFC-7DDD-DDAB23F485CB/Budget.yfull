@@ -39,9 +39,9 @@
 		{
 			"date": "2014-02-17",
 			"cleared": "Uncleared",
-			"entityVersion": "A-75",
+			"entityVersion": "A-92",
 			"categoryId": "A18",
-			"amount": -100,
+			"amount": -100.12,
 			"entityId": "9D8AE375-06CA-E554-21FB-417D96CE437C",
 			"entityType": "transaction",
 			"payeeId": "923CF0E7-F3BF-52C3-2D05-417DDAF133C5",
@@ -51,7 +51,7 @@
 	],
 	"fileMetaData": {
 		"entityType": "fileMetaData",
-		"currentKnowledge": "A-90",
+		"currentKnowledge": "A-93",
 		"budgetDataVersion": "4.2"
 	},
 	"accountMappings": [],
@@ -535,15 +535,15 @@
 		},
 		{
 			"renameConditions": null,
-			"autoFillAmount": -100,
+			"autoFillAmount": -100.12,
 			"autoFillCategoryId": "A18",
 			"locations": null,
 			"name": "Target",
 			"enabled": true,
 			"entityId": "923CF0E7-F3BF-52C3-2D05-417DDAF133C5",
 			"entityType": "payee",
-			"entityVersion": "A-74",
-			"autoFillMemo": ""
+			"entityVersion": "A-93",
+			"autoFillMemo": null
 		}
 	],
 	"scheduledTransactions": [],
@@ -861,6 +861,13 @@
 			"entityId": "MB/2015-04",
 			"entityType": "monthlyBudget",
 			"entityVersion": "A-90"
+		},
+		{
+			"monthlySubCategoryBudgets": [],
+			"month": "2015-05-01",
+			"entityId": "MB/2015-05",
+			"entityType": "monthlyBudget",
+			"entityVersion": "A-91"
 		}
 	]
 }

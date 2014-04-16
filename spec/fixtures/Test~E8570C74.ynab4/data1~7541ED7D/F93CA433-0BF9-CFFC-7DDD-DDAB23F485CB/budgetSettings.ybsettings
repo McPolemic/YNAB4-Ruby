@@ -15,7 +15,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>account</dataField>
 							<visible>true</visible>
-							<width>64.44281524926687</width>
+							<width>64.44281524926689</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
@@ -55,7 +55,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>344.42421648992257</width>
+							<width>344.4242164899225</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -65,7 +65,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>67.43147604843782</width>
+							<width>67.43147604843783</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>workingBalance</dataField>
