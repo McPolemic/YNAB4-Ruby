@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Ynab::VERSION
   spec.authors       = ["Adam Lukens"]
   spec.email         = ["alukens@purduefed.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{A read-only interface to YNAB 4 data files}
+  spec.summary       = %q{A read-only interface to YNAB 4 data files}
+  spec.homepage      = "https://github.com/McPolemic/YNAB4-Ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
+  spec.add_development_dependency "pry"
 end
