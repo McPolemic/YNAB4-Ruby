@@ -36,8 +36,23 @@ module Ynab
     end
 
     def self.open file_path
-      BudgetParser.new(file_path).open
-      self.new
+      data = BudgetParser.new(file_path).open
+      budget = self.new
+      budget.populate data
+
+      budget
+    end
+
+    def populate budget_data
+      budget_data["transactions"].each do |t|
+        transaction = Transaction.new(account = t["accountId"],
+                                      date = Date.parse(t["date"]),
+                                      payee = t["payeeId"],
+                                      category = t["categoryId"],
+                                      memo = nil,
+                                      amount = t["amount"])
+        add_transaction(transaction)
+      end
     end
   end
 

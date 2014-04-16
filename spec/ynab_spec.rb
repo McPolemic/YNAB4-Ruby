@@ -1,18 +1,6 @@
 require 'ynab'
 
 describe Ynab do
-  describe '#open' do
-    let(:ynab) { Ynab.open('./spec/fixtures/Test~E8570C74.ynab4') }
-
-    it 'returns an object with transactions' do
-      transaction = ynab.transactions.first
-      pending "Figure out transactions first"
-      expect(transaction.date).to eq Date.new(2014, 2, 17)
-      #expect(transaction.account.name).to eq "Savings"
-
-    end
-  end
-
   describe Ynab::Budget do
     let(:budget) { Ynab::Budget.new }
 
