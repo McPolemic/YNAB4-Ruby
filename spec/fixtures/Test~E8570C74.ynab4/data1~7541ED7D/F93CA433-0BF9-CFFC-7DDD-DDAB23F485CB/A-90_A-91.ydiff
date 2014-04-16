@@ -1,0 +1,22 @@
+{
+  "budgetDataGUID": null,
+  "startVersion": "A-90",
+  "dataVersion": "4.2",
+  "endVersion": "A-91",
+  "shortDeviceId": "A",
+  "publishTime": "Wed Apr 16 00:49:27 GMT-0400 2014",
+  "formatVersion": null,
+  "deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
+  "items": [
+    {
+      "month": "2015-05-01",
+      "entityId": "MB/2015-05",
+      "isResolvedConflict": false,
+      "entityType": "monthlyBudget",
+      "note": null,
+      "entityVersion": "A-91",
+      "isTombstone": false,
+      "madeWithKnowledge": null
+    }
+  ]
+}

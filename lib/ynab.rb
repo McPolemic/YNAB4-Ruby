@@ -36,21 +36,23 @@ module Ynab
     end
 
     def self.open file_path
-      json_transactions = (BudgetParser.new(file_path).open)["transactions"]
+      data = BudgetParser.new(file_path).open
       budget = self.new
-
-      json_transactions.each do |jt|
-        transaction = Transaction.new(jt["accountId"],
-                                      jt["date"],
-                                      jt["payeeId"],
-                                      jt["categoryId"],
-                                      jt[""],
-                                      jt["amount"]
-                                     )
-        budget.add_transaction transaction
-      end
+      budget.populate data
 
       budget
+    end
+
+    def populate budget_data
+      budget_data["transactions"].each do |t|
+        transaction = Transaction.new(account = t["accountId"],
+                                      date = Date.parse(t["date"]),
+                                      payee = t["payeeId"],
+                                      category = t["categoryId"],
+                                      memo = t["memo"],
+                                      amount = t["amount"])
+        add_transaction(transaction)
+      end
     end
   end
 
