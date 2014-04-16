@@ -1,29 +1,7 @@
 # Ynab
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'ynab'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ynab
-
-## Usage
-
-TODO: Write usage instructions here
+A read-only library to access your YNAB 4 data files.
 
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+This is still a work-in-progress. I am parsing the entire JSON budget file and storing some transactions but very little else. Feel free to send pull requests or file issues if you have something you'd like to be working ahead of everything else.
