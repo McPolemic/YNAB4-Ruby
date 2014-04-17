@@ -1,7 +1,8 @@
 require 'securerandom'
 require 'ynab/budget_parser'
 
-describe Ynab::BudgetParser do
+describe 'Ynab::BudgetParser' do
+pending
   let(:bp) { Ynab::BudgetParser.new('./test') }
 
   describe '#open' do
