@@ -4,7 +4,6 @@ require 'ynab/budget_folder'
 require 'fileutils'
 require 'tempfile'
 require 'json'
-require 'pry'
 
 describe Ynab::BudgetFolder do
   describe '#metadata_file', fakefs: true do

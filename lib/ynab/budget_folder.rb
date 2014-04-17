@@ -1,7 +1,6 @@
 require 'json'
 require 'ynab/errors'
 require 'pathname'
-require 'pry'
 
 module Ynab
   class BudgetFolder
