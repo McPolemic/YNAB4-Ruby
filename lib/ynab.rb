@@ -1,5 +1,5 @@
 require "ynab/version"
-require 'ynab/budget_parser'
+require 'ynab/budget_folder'
 require 'ynab/errors'
 
 module Ynab
@@ -36,7 +36,7 @@ module Ynab
     end
 
     def self.open file_path
-      data = BudgetParser.new(file_path).open
+      data = BudgetFolder.new(file_path).budget_data
       budget = self.new
       budget.populate data
 

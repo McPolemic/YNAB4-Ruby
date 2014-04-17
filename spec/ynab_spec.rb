@@ -44,7 +44,7 @@ describe Ynab do
     describe '.open' do
       it 'raises an error if the file does not exist' do
         invalid_path = '/invalid'
-        expect{Ynab::Budget.open(invalid_path)}.to raise_error Ynab::BudgetFileNotFound
+        expect{Ynab::Budget.open(invalid_path)}.to raise_error Ynab::BudgetFileNotFound, "Metadata File Not Found"
       end
     end
   end
