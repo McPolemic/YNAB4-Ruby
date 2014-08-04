@@ -38,21 +38,50 @@ module Ynab
     def self.open file_path
       data = BudgetFolder.new(file_path).budget_data
       budget = self.new
+      budget.populate_payees data
       budget.populate_transactions data
 
       budget
     end
 
+    def populate_payees budget_data
+      budget_data['payees'].each do |p|
+        payee = Payee.new(id = p['entityId'],
+                          name = p['name'])
+        add_payee(payee)
+      end
+    end
+
+    def find_payee_by_id id
+      @payees.find_all{|p| p.id == id}.first
+    end
+
     def populate_transactions budget_data
       budget_data["transactions"].each do |t|
+        payee = find_payee_by_id t['payeeId']
+
         transaction = Transaction.new(account = t["accountId"],
                                       date = Date.parse(t["date"]),
-                                      payee = t["payeeId"],
+                                      payee = payee,
                                       category = t["categoryId"],
                                       memo = t["memo"],
                                       amount = t["amount"])
+        puts payee
         add_transaction(transaction)
       end
+    end
+  end
+
+  class Payee
+    attr_reader :id, :name
+
+    def initialize id, name
+      @id = id
+      @name = name
+    end
+
+    def to_s
+      "#<Payee: #{@name}>"
     end
   end
 
@@ -72,10 +101,10 @@ module Ynab
                    amount
 
       @account = account
-      @date = date 
-      @payee = payee 
-      @category = category 
-      @memo = memo 
+      @date = date
+      @payee = payee
+      @category = category
+      @memo = memo
       @amount = amount
     end
 

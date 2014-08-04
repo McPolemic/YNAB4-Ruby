@@ -4,6 +4,23 @@ require 'ynab'
 describe Ynab do
   let(:ynab) { Ynab.open('./spec/fixtures/Test~E8570C74.ynab4') }
 
+  describe '.payees' do
+    let(:payees) { ynab.payees }
+
+    it 'finds payees' do
+      expect(payees.count).to eq 5
+    end
+
+    it 'names payees' do
+      expect(payees[4].name).to eq "Target"
+    end
+
+    it 'loads the payee id' do
+      expect(payees[4].id).to eq "923CF0E7-F3BF-52C3-2D05-417DDAF133C5"
+    end
+  end
+
+
   describe '.transactions' do
     let(:transactions) { ynab.transactions }
     let(:transaction)  { ynab.transactions.first }
@@ -30,7 +47,6 @@ describe Ynab do
     end
 
     it "shows transaction's payee" do
-      pending "waiting on parsing payee objects"
       expect(transaction.payee.name).to eq "Starting Balance"
     end
 
