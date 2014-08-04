@@ -38,12 +38,12 @@ module Ynab
     def self.open file_path
       data = BudgetFolder.new(file_path).budget_data
       budget = self.new
-      budget.populate data
+      budget.populate_transactions data
 
       budget
     end
 
-    def populate budget_data
+    def populate_transactions budget_data
       budget_data["transactions"].each do |t|
         transaction = Transaction.new(account = t["accountId"],
                                       date = Date.parse(t["date"]),
