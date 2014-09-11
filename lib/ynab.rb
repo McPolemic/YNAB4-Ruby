@@ -1,3 +1,5 @@
+require "date"
+
 require "ynab/version"
 require 'ynab/budget_folder'
 require 'ynab/errors'
