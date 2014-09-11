@@ -68,7 +68,6 @@ module Ynab
                                       category = t["categoryId"],
                                       memo = t["memo"],
                                       amount = t["amount"])
-        puts payee
         add_transaction(transaction)
       end
     end
