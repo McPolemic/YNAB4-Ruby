@@ -83,4 +83,21 @@ describe Ynab do
       end
     end
   end
+
+  describe Ynab::Category do
+    describe '#full_name' do
+      let(:top)  { 'Savings' }
+      let(:middle) { 'Spending Money' }
+      let(:low)    { 'Target' }
+
+      it 'recursively finds the name of the category' do
+        top = Ynab::Category.new(3, 'Top')
+        mid = Ynab::Category.new(3, 'Middle', top)
+        bot = Ynab::Category.new(3, 'Bottom', mid)
+
+        expect(bot.full_name).to eq "Top/Middle/Bottom"
+      end
+    end
+  end
 end
+

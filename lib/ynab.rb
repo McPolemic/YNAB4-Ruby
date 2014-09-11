@@ -117,4 +117,26 @@ module Ynab
       @amount if @amount < 0
     end
   end
+
+  class Category
+    attr_reader :id, :name, :parent
+
+    def initialize id, name, parent = nil
+      @id = id
+      @name = name
+      @parent = parent
+    end
+
+    def full_name
+      if parent
+        "#{parent.full_name}/#{name}"
+      else
+        name
+      end
+    end
+
+    def to_s
+      "#<Category: #{full_name}>"
+    end
+  end
 end
