@@ -41,6 +41,7 @@ module Ynab
       data = BudgetFolder.new(file_path).budget_data
       budget = self.new
       budget.populate_payees data
+      budget.populate_accounts data
       budget.populate_transactions data
 
       budget
@@ -58,11 +59,27 @@ module Ynab
       @payees.find_all{|p| p.id == id}.first
     end
 
+    def populate_accounts budget_data
+      budget_data['accounts'].each do |p|
+        account = Account.new(id = p['entityId'],
+                              name = p['accountName'],
+                              hidden = p['hidden'],
+                              last_reconciled_date = p['lastReconciledDate'],
+                              last_reconciled_balance = p['lastReconciledBalance'])
+        add_account(account)
+      end
+    end
+
+    def find_account_by_id id
+      @accounts.find_all{|p| p.id == id}.first
+    end
+
     def populate_transactions budget_data
       budget_data["transactions"].each do |t|
         payee = find_payee_by_id t['payeeId']
+        account = find_account_by_id t['accountId']
 
-        transaction = Transaction.new(account = t["accountId"],
+        transaction = Transaction.new(account = account,
                                       date = Date.parse(t["date"]),
                                       payee = payee,
                                       category = t["categoryId"],
@@ -83,6 +100,22 @@ module Ynab
 
     def to_s
       "#<Payee: #{@name}>"
+    end
+  end
+
+  class Account
+    attr_reader :id, :name, :hidden, :last_reconciled_date, :last_reconciled_balance
+
+    def initialize id, name, hidden, last_reconciled_date, last_reconciled_balance
+      @id = id
+      @name = name
+      @hidden= hidden
+      @last_reconciled_date = last_reconciled_date
+      @last_reconciled_balance = last_reconciled_balance
+    end
+
+    def to_s
+      "#<Account: #{@name}>"
     end
   end
 

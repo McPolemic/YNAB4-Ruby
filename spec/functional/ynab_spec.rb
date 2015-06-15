@@ -42,7 +42,6 @@ describe Ynab do
     end
 
     it "shows transaction's account" do
-      pending "waiting on parsing account objects"
       expect(transaction.account.name).to eq "Savings"
     end
 
@@ -52,6 +51,18 @@ describe Ynab do
 
     it "shows transaction's category" do
       pending "waiting on parsing category objects"
+    end
+  end
+
+  describe '.accounts' do
+    let(:accounts) { ynab.accounts }
+
+    it 'shows how many accounts exist for a budget' do
+      expect(accounts.count).to eq 3
+    end
+
+    it 'parses the name of an account' do
+      expect(accounts.map(&:name).sort).to eq %w{Checking Off-Budget Savings}
     end
   end
 end
