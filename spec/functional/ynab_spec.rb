@@ -56,6 +56,7 @@ describe Ynab do
 
   describe '.accounts' do
     let(:accounts) { ynab.accounts }
+    let(:checking) { ynab.accounts.find{|a| a.name == "Checking"} }
 
     it 'shows how many accounts exist for a budget' do
       expect(accounts.count).to eq 3
@@ -63,6 +64,10 @@ describe Ynab do
 
     it 'parses the name of an account' do
       expect(accounts.map(&:name).sort).to eq %w{Checking Off-Budget Savings}
+    end
+
+    it 'loads all transactions for an account' do
+      expect(checking.transactions.count).to eq 2
     end
   end
 end

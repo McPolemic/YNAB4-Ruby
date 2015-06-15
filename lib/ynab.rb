@@ -86,6 +86,7 @@ module Ynab
                                       memo = t["memo"],
                                       amount = t["amount"])
         add_transaction(transaction)
+        account.add_transaction(transaction)
       end
     end
   end
@@ -104,7 +105,12 @@ module Ynab
   end
 
   class Account
-    attr_reader :id, :name, :hidden, :last_reconciled_date, :last_reconciled_balance
+    attr_reader :id,
+                :name,
+                :hidden,
+                :last_reconciled_date,
+                :last_reconciled_balance,
+                :transactions
 
     def initialize id, name, hidden, last_reconciled_date, last_reconciled_balance
       @id = id
@@ -112,10 +118,15 @@ module Ynab
       @hidden= hidden
       @last_reconciled_date = last_reconciled_date
       @last_reconciled_balance = last_reconciled_balance
+      @transactions = []
     end
 
     def to_s
       "#<Account: #{@name}>"
+    end
+
+    def add_transaction t
+      @transactions << t
     end
   end
 
