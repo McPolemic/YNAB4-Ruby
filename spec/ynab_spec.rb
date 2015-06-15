@@ -30,12 +30,14 @@ describe Ynab do
 
     describe '#add_transaction' do
       it 'adds and stores transactions' do
-        t = Ynab::Transaction.new('Savings',
+        t = Ynab::Transaction.new('1',
+                                  'Savings',
                                   Date.new(2014, 3, 26), 
                                   'Target',
                                   'Spending Money',
                                   "This is a memo",
-                                  -100.00)
+                                  -100.00,
+                                  true)
         budget.add_transaction(t)
         expect(budget.transactions.count).to eq 1
       end
@@ -56,12 +58,14 @@ describe Ynab do
       let(:payee)    { 'Target' }
 
       it 'stores values for a debit transaction' do
-        t = Ynab::Transaction.new(account,
+        t = Ynab::Transaction.new('1',
+                                  account,
                                   Date.new(2014, 3, 26), 
                                   payee,
                                   category,
                                   "This is a memo",
-                                  -100.00)
+                                  -100.00,
+                                  true)
 
         expect(t.date).to eq Date.new(2014, 3, 26)
         expect(t.payee).to eq 'Target'
@@ -70,12 +74,14 @@ describe Ynab do
       end
 
       it 'stores values for a credit transaction' do
-        t = Ynab::Transaction.new(account,
+        t = Ynab::Transaction.new('1',
+                                  account,
                                   Date.new(2014, 2, 28),
                                   payee,
                                   category,
                                   "Another memo",
-                                  200.00)
+                                  200.00,
+                                  true)
         expect(t.date).to eq Date.new(2014, 2, 28)
         expect(t.payee).to eq 'Target'
         expect(t.inflow).to eq 200.00

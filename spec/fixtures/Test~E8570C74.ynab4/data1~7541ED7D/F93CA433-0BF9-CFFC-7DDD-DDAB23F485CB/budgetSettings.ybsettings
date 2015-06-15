@@ -1,7 +1,7 @@
 <com.ynab.dataAccess.settings.MachineBudgetSettingsVO>
 	<extraDataObjects>
 		<com.ynab.dataAccess.settings.GeneralAppSettingsForThisMachineVO>
-			<lastTabShown>All Accounts</lastTabShown>
+			<lastTabShown>Account_Checking</lastTabShown>
 			<offBudgetAccountContainerState>normal</offBudgetAccountContainerState>
 			<onBudgetAccountContainerState>normal</onBudgetAccountContainerState>
 		</com.ynab.dataAccess.settings.GeneralAppSettingsForThisMachineVO>
@@ -15,12 +15,12 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>account</dataField>
 							<visible>true</visible>
-							<width>64.44281524926689</width>
+							<width>62.46334310850442</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
 							<visible>true</visible>
-							<width>109.70149221237276</width>
+							<width>106.33182180311898</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>checkNumber</dataField>
@@ -55,7 +55,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>344.4242164899225</width>
+							<width>333.84463304825255</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -65,7 +65,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>67.43147604843783</width>
+							<width>65.36020204012404</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>workingBalance</dataField>
@@ -81,7 +81,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>account</dataField>
 							<visible>true</visible>
-							<width>64.91596638655463</width>
+							<width>63.025210084033624</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
@@ -101,7 +101,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>frequency</dataField>
 							<visible>true</visible>
-							<width>64.50774350766463</width>
+							<width>62.62887719190741</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>inflow</dataField>
@@ -111,7 +111,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>337.6548495650087</width>
+							<width>326.36393161651324</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -121,7 +121,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>100.9214405407721</width>
+							<width>97.98198110754572</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 					</scheduleGridColumnSettings>
 					<scheduledGridSort>
@@ -144,7 +144,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
 							<visible>true</visible>
-							<width>289.4341119107362</width>
+							<width>241.053629861141</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>checkNumber</dataField>
@@ -179,7 +179,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>103.13177617852762</width>
+							<width>85.89274027771808</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -189,7 +189,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>289.4341119107362</width>
+							<width>241.053629861141</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>workingBalance</dataField>
@@ -210,7 +210,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
 							<visible>true</visible>
-							<width>257.56444739367436</width>
+							<width>216.44071209552462</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>date</dataField>
@@ -225,7 +225,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>frequency</dataField>
 							<visible>true</visible>
-							<width>103.0257789574698</width>
+							<width>86.5762848382099</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>inflow</dataField>
@@ -235,7 +235,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>95.84532625518148</width>
+							<width>80.54229097074086</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -245,7 +245,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>257.56444739367436</width>
+							<width>216.44071209552462</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 					</scheduleGridColumnSettings>
 					<scheduledGridSort>
@@ -268,7 +268,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
 							<visible>true</visible>
-							<width>289.4341119107362</width>
+							<width>241.053629861141</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>checkNumber</dataField>
@@ -303,7 +303,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>103.13177617852762</width>
+							<width>85.89274027771808</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -313,7 +313,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>289.4341119107362</width>
+							<width>241.053629861141</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>workingBalance</dataField>
@@ -334,7 +334,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>category</dataField>
 							<visible>true</visible>
-							<width>257.56444739367436</width>
+							<width>216.44071209552462</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>date</dataField>
@@ -349,7 +349,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>frequency</dataField>
 							<visible>true</visible>
-							<width>103.0257789574698</width>
+							<width>86.5762848382099</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>inflow</dataField>
@@ -359,7 +359,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>memo</dataField>
 							<visible>true</visible>
-							<width>95.84532625518148</width>
+							<width>80.54229097074086</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>outflow</dataField>
@@ -369,7 +369,7 @@
 						<com.ynab.view.register.settings.ColumnSettingsVO>
 							<dataField>payee</dataField>
 							<visible>true</visible>
-							<width>257.56444739367436</width>
+							<width>216.44071209552462</width>
 						</com.ynab.view.register.settings.ColumnSettingsVO>
 					</scheduleGridColumnSettings>
 					<scheduledGridSort>

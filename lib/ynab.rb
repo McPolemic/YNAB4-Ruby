@@ -79,12 +79,14 @@ module Ynab
         payee = find_payee_by_id t['payeeId']
         account = find_account_by_id t['accountId']
 
-        transaction = Transaction.new(account = account,
+        transaction = Transaction.new(id = t["entityId"],
+                                      account = account,
                                       date = Date.parse(t["date"]),
                                       payee = payee,
                                       category = t["categoryId"],
                                       memo = t["memo"],
-                                      amount = t["amount"])
+                                      amount = t["amount"],
+                                      cleared = t["cleared"] == "Cleared")
         add_transaction(transaction)
         account.add_transaction(transaction)
       end
@@ -128,6 +130,16 @@ module Ynab
     def add_transaction t
       @transactions << t
     end
+
+    def cleared_balance
+      @transactions.
+        select{|transaction| transaction.cleared?}.
+        reduce(0) {|sum, transaction| sum + transaction.amount}
+    end
+
+    def working_balance
+      @transactions.reduce(0) {|sum, transaction| sum + transaction.amount}
+    end
   end
 
   class Transaction
@@ -136,21 +148,26 @@ module Ynab
                 :payee,
                 :category,
                 :memo,
-                :amount
+                :amount,
+                :id
 
-    def initialize account,
+    def initialize id,
+                   account,
                    date,
                    payee,
                    category,
                    memo,
-                   amount
+                   amount,
+                   cleared
 
+      @id = id
       @account = account
       @date = date
       @payee = payee
       @category = category
       @memo = memo
       @amount = amount
+      @cleared = cleared
     end
 
     def inflow
@@ -159,6 +176,10 @@ module Ynab
 
     def outflow
       @amount if @amount < 0
+    end
+
+    def cleared?
+      @cleared
     end
   end
 

@@ -1,13 +1,13 @@
 {
+	"knowledge": "A-108",
+	"knowledgeInFullBudgetFile": "A-108",
+	"YNABVersion": "Desktop version: YNAB 4 v4.3.655 (com.ynab.YNAB4.LiveCaptive), AIR Version: 4.0.0.1390",
+	"deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
+	"lastDataVersionFullyKnown": "4.2",
+	"deviceType": "Desktop (AIR), OS:Mac OS 10.10.3",
+	"formatVersion": "1.2",
 	"highestDataVersionImported": null,
 	"friendlyName": "mac0018",
-	"knowledgeInFullBudgetFile": "A-94",
 	"hasFullKnowledge": true,
-	"shortDeviceId": "A",
-	"knowledge": "A-94",
-	"formatVersion": "1.2",
-	"deviceGUID": "F93CA433-0BF9-CFFC-7DDD-DDAB23F485CB",
-	"YNABVersion": "Desktop version: YNAB 4 v4.3.451 (com.ynab.YNAB4.LiveCaptive), AIR Version: 4.0.0.1390",
-	"lastDataVersionFullyKnown": "4.2",
-	"deviceType": "Desktop (AIR), OS:Mac OS 10.9.2"
+	"shortDeviceId": "A"
 }
