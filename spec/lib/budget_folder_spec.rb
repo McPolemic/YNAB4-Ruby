@@ -34,7 +34,7 @@ describe Ynab::BudgetFolder do
       testfile_dir = File.dirname testfile
 
       bf = Ynab::BudgetFolder.new(testfile_dir)
-      bf.stub(:metadata_file).and_return(testfile.path)
+      allow(bf).to receive(:metadata_file).and_return(testfile.path)
       md = bf.metadata
       expect(md).to eq Ynab::BudgetFolder::Metadata.new(3, Pathname(File.join(testfile_dir, 'data123456')))
     end
@@ -47,7 +47,7 @@ describe Ynab::BudgetFolder do
     let(:md) { Ynab::BudgetFolder::Metadata.new(2, budget_dir.join('data123456')) }
 
     before do
-      bf.stub(:metadata).and_return md
+      allow(bf).to receive(:metadata).and_return md
     end
 
     it 'identifies the file' do
@@ -90,8 +90,8 @@ describe Ynab::BudgetFolder do
 
     it 'provides devices for each device fie' do
       bf = Ynab::BudgetFolder.new(budget_dir, reader: method(:loader))
-      bf.stub(:device_files).and_return [1, 2]
-      bf.stub(:metadata).and_return Ynab::BudgetFolder::Metadata.new(2, data_dir)
+      allow(bf).to receive(:device_files).and_return [1, 2]
+      allow(bf).to receive(:metadata).and_return Ynab::BudgetFolder::Metadata.new(2, data_dir)
 
       dv1 = new_device(dh1)
       dv2 = new_device(dh2)
@@ -104,7 +104,7 @@ describe Ynab::BudgetFolder do
     it 'gets the budget data from the device' do
       FakeDev = Struct.new(:full_knowledge?, :budget_data)
       bf = Ynab::BudgetFolder.new('/nodir')
-      bf.stub(:devices).and_return [FakeDev.new(true, "BUDGET DATA")]
+      allow(bf).to receive(:devices).and_return [FakeDev.new(true, "BUDGET DATA")]
       expect(bf.budget_data).to eq "BUDGET DATA"
     end
   end
