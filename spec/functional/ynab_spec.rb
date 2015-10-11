@@ -117,7 +117,6 @@ describe Ynab do
     # There's no real category for "Income for February", but we have
     # to act like there is.
     it 'returns a pseudo-category for IDs that represent income' do
-      pending "Income category creation"
       income_category = ynab.find_category_by_id("Category/__ImmediateIncome__")
       expect(income_category).to be
       expect(income_category.id).to eq "Category/__ImmediateIncome__"

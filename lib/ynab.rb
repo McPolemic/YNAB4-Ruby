@@ -76,6 +76,7 @@ module Ynab
     end
 
     def find_category_by_id id
+      return IncomeCategory.new(id) if id == "Category/__ImmediateIncome__"
       @categories.find_all{|c| c.id == id}.first
     end
 
@@ -229,6 +230,12 @@ module Ynab
 
     def to_s
       "#<Category: #{full_name}>"
+    end
+  end
+
+  class IncomeCategory < Category
+    def initialize id, name = "Immediate Income", parent = nil
+      super
     end
   end
 end
