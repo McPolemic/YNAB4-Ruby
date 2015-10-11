@@ -86,4 +86,54 @@ describe Ynab do
       expect(checking.working_balance).to eq 399.88
     end
   end
+
+  describe '.categories' do
+    let(:categories) { ynab.categories }
+    let(:category) { ynab.categories.find{|a| a.name == "Checking"} }
+
+    it 'shows how many categories exist for a budget' do
+      expect(categories.count).to eq 36
+    end
+
+    it 'parses the name of an category' do
+      expect(categories.first.name).to eq "Hidden Categories"
+    end
+
+    it 'parses the name of a subcategory' do
+      subcategory = categories.find{|c| c.name == "Charitable"}
+      expect(subcategory.name).to eq "Charitable"
+    end
+
+    it "parses the name of a subcategory's parent category" do
+      subcategory = categories.find{|c| c.name == "Charitable"}
+      expect(subcategory.parent.name).to eq "Giving"
+    end
+
+    it 'finds a category by ID' do
+      spending_money = ynab.find_category_by_id('A18')
+      expect(spending_money.name).to eq "Spending Money"
+    end
+
+    # There's no real category for "Income for February", but we have
+    # to act like there is.
+    it 'returns a pseudo-category for IDs that represent income' do
+      pending "Income category creation"
+      income_category = ynab.find_category_by_id("Category/__ImmediateIncome__")
+      expect(income_category).to be
+      expect(income_category.id).to eq "Category/__ImmediateIncome__"
+      expect(income_category.name).to eq "Immediate Income"
+    end
+
+    it 'returns an income category for income transactions' do
+      first_transaction = ynab.transactions.first
+      pending "Income category creation"
+      expect(first_transaction.category.name).to eq "Income for February"
+    end
+
+    it 'loads all transactions for a category' do
+      spending_money = categories.find{|c| c.name == "Spending Money"}
+      expect(spending_money.transactions.count).to eq 1
+    end
+
+  end
 end

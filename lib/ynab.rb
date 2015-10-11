@@ -41,6 +41,7 @@ module Ynab
       data = BudgetFolder.new(file_path).budget_data
       budget = self.new
       budget.populate_payees data
+      budget.populate_categories data
       budget.populate_accounts data
       budget.populate_transactions data
 
@@ -57,6 +58,25 @@ module Ynab
 
     def find_payee_by_id id
       @payees.find_all{|p| p.id == id}.first
+    end
+
+    def populate_categories budget_data
+      budget_data['masterCategories'].each do |c|
+        category = Category.new(id = c['entityId'],
+                                name = c['name'])
+        add_category(category)
+
+        c['subCategories'].each do |sc|
+          subcategory = Category.new(id = sc['entityId'],
+                                     name = sc['name'],
+                                     parent = category)
+          add_category(subcategory)
+        end
+      end
+    end
+
+    def find_category_by_id id
+      @categories.find_all{|c| c.id == id}.first
     end
 
     def populate_accounts budget_data
@@ -78,17 +98,19 @@ module Ynab
       budget_data["transactions"].each do |t|
         payee = find_payee_by_id t['payeeId']
         account = find_account_by_id t['accountId']
+        category = find_category_by_id t['categoryId']
 
         transaction = Transaction.new(id = t["entityId"],
                                       account = account,
                                       date = Date.parse(t["date"]),
                                       payee = payee,
-                                      category = t["categoryId"],
+                                      category = category,
                                       memo = t["memo"],
                                       amount = t["amount"],
                                       cleared = t["cleared"] == "Cleared")
         add_transaction(transaction)
         account.add_transaction(transaction)
+        category.add_transaction(transaction) unless category.nil?
       end
     end
   end
@@ -184,12 +206,17 @@ module Ynab
   end
 
   class Category
-    attr_reader :id, :name, :parent
+    attr_reader :id, :name, :parent, :transactions
 
     def initialize id, name, parent = nil
       @id = id
       @name = name
       @parent = parent
+      @transactions = []
+    end
+
+    def add_transaction t
+      @transactions << t
     end
 
     def full_name
