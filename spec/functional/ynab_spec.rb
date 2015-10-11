@@ -51,6 +51,7 @@ describe Ynab do
 
     it "shows transaction's category" do
       pending "waiting on parsing category objects"
+      expect(transaction.category.name).to eq "Income for February"
     end
 
     it "Shows whether a transaction is cleared" do
